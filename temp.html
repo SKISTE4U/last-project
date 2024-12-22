@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background: rgb(64, 64, 64);
+            overflow-x: hidden;
+        }
+        .wrapper{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            transition: all .3s;
+            flex-direction: row;
+        }
+        .wrapper section{
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+        #buttons{
+            position: absolute;
+            min-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: center;
+            font-size: 150px;
+            user-select: none;
+            z-index: 100;
+        }
+        .block_with_bg{
+
+        }
+        .bg{
+            position: absolute;
+            z-index: 2;
+        }
+        .content{
+            z-index: 100;
+            position: relative;
+        }
+    </style>
+    <script>
+        function goPage(page) {
+            const wrapper = document.querySelector('.wrapper')
+            wrapper.style.transform = 'translateX(-'+100*page+'%)'
+
+            left.setAttribute('onclick','goPage('+(page-1)+')')
+            right.setAttribute('onclick','goPage('+(page+1)+')')
+        }
+    </script>
+</head>
+<body>
+    <div id="buttons">
+        <span id="left" onclick="goPage(0)">←</span>
+        <span id="right" onclick="goPage(1)">→</span>
+    </div>
+    <div class="wrapper">
+        <section style="background: rgb(101, 0, 0);">
+            text1
+        </section>
+        <section style="background: rgb(0, 0, 86);">
+            text2
+        </section>
+        <section style="background: rgb(0, 39, 0);">
+            text3
+        </section>
+        <section style="background: rgb(48, 48, 0);">
+            text4
+        </section>
+    </div>
+    <div class="block_with_bg">
+        <div class="bg">
+            <img src="tarakani.gif" alt="">
+        </div>
+        <h1 class="content">
+            ZALUPA
+        </h1>
+    </div>
+</body>
+</html>

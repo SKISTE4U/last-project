@@ -1,0 +1,56 @@
+.Header{
+    height: 5vh;
+    padding: 20px 17vw 20px 17vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    background: white;
+}
+.Header img{
+    height: 50%;
+}
+.Header .navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 20px
+}
+.Header .ContactZone{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* align-items: center; */
+}
+.Header .ContactZone img{
+    height: 100%;
+}
+.CallUs, .Chat{
+    display: flex;
+    white-space: nowrap;
+}
+._2lines{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+a, a:visited{
+    color: black;
+    text-decoration: none;
+    transition: all .3s;
+}
+a:hover{
+    color: var(--primary);
+}
+.text_in_contact{
+    font-weight: 200;
+    transition: all .3s;
+}
+a:hover .text_in_contact{
+    color: var(--primary);
+}
+.name{
+    font-size: 14px;
+    font-weight: 600;
+}

@@ -1,0 +1,118 @@
+.Buttons{
+    width: calc(100% - 40px);
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding: 0 20px 0 20px;
+    z-index: 2;
+}
+.left, .right{
+    position: absolute;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.803);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+.left{
+    left: 30px;
+}
+.right{
+    /* left: 100px; */
+    right: 30px;
+    /* margin-left: 100px; */
+}
+.Buttons span{
+    background: rgba(255, 255, 255, 0.622);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+.Sliders{
+    /* width: calc(100% - 34vw); */
+    height: 100vh;
+    /* background: red; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin-left: 17vw; */
+    transition: .5s all;
+}
+.Sliders .Slider{
+    display: flex;
+    /* background: red; */
+    /* justify-content: center; */
+    flex-direction: column;
+    min-width: calc(100% - 17vw);
+    color: white;
+    gap: 50px;
+    height: 100%;
+    padding-left: 17vw;
+    background: url('https://live.verstaem.online/createx/img/hero-bg.jpg');
+}
+.primaryText{
+    color: var(--primary);
+}
+.bigText{
+    font-size: 70px;
+    font-weight: 700;
+}
+.desc{
+    font-size: 20px;
+}
+.SlidersButtons{
+    display: flex;
+    gap: 30px;
+}
+input{
+    padding: 20px 40px 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input:nth-child(1){
+    background: transparent;
+    border: 1px solid white;
+    transition: all .3s;
+}
+input:nth-child(1):hover{
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+input:nth-child(2){
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    transition: all .3s;
+}
+input:nth-child(2):hover{
+    /* background: var(--primary); */
+    filter: contrast(150%);
+}
+.pause{
+    height: 20%;
+}
+.desc{
+    max-width: 40%;
+    line-height: 1.5em;
+}
