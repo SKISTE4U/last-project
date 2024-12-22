@@ -3,19 +3,17 @@ import './Slider.css'
 export default function BasicSlider() {
     var page = 0
     
-    function goPage(){
+    function goPage(pagee,elem){
         const sliders = document.querySelector('.Sliders')
-        console.log(sliders)
-        const left = document.querySelector('.left')
-        const right = document.querySelector('.right')
-        const max = parseInt(sliders.dataset.max)
-        
-        if (page < max){
-            sliders.style.transform = 'translateX(-'+100*page+'%)'
-    
-            left.setAttribute('onclick','goPage('+(page-1)+')')
-            right.setAttribute('onclick','goPage('+(page+1)+')')
+        page = pagee
+        sliders.style.transform = 'translateX(-'+100*page+'%)'
+        const navbars = document.querySelectorAll('.OneArticle')
+        for (let x = 0; x < navbars.length; x++) {
+            const element = navbars[x];
+            element.classList.remove('active')
         }
+        console.log(elem)
+        elem.currentTarget.classList.add('active')
     }
     function rightPage() {
         const sliders = document.querySelector('.Sliders')
@@ -37,6 +35,24 @@ export default function BasicSlider() {
     <div>
         <span className='left' onClick={leftPage}>←</span>
         <span className='right' onClick={rightPage}>→</span>
+        <div className='NavBar'>
+            <div className='OneArticle active' onClick={(event) => goPage(0, event)}>
+                <div className='number'>01</div>
+                <div className='ProgressBar'></div>
+            </div>
+            <div className='OneArticle' onClick={(event) => goPage(1, event)}>
+                <div className='number'>02</div>
+                <div className='ProgressBar'></div>
+            </div>
+            <div className='OneArticle' onClick={(event) => goPage(2, event)}>
+                <div className='number'>03</div>
+                <div className='ProgressBar'></div>
+            </div>
+            <div className='OneArticle' onClick={(event) => goPage(3, event)}>
+                <div className='number'>04</div>
+                <div className='ProgressBar'></div>
+            </div>
+        </div>
         <div className='Sliders' data-max='4'>
         <div className='Slider'>
             <div className='pause'></div>

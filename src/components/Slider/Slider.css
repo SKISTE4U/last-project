@@ -116,3 +116,64 @@ input:nth-child(2):hover{
     max-width: 40%;
     line-height: 1.5em;
 }
+
+.NavBar{
+    position: absolute;
+    bottom: 20px;
+    left: 17vw;
+    user-select: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 10;
+    transition: all .5s;
+}
+.NavBar .OneArticle{
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    transition: all .5s;
+}
+
+.NavBar .active{
+    color: white;
+    transition: all .5s;
+}
+.NavBar .ProgressBar{
+    width: 150px;
+    height: 3px;
+    transition: all .5s;
+    margin-top: 10px;
+    background: rgba(141, 141, 141,.6);
+    position: relative;
+}
+.NavBar .active .ProgressBar{
+    background: rgb(255, 255, 255);
+}
+/* .NavBar .active .ProgressBar::before{
+    animation: progress 1s linear infinite;
+    display: block;
+}
+.NavBar .ProgressBar::before{
+    content: "";
+    min-height: 3px;
+    position: absolute;
+    transform: translateX(-100%);
+    overflow: hidden;
+    background: red;
+    min-width: 150px;
+    z-index: 1;
+    display: none;
+} */
+@keyframes progress {
+    0%{
+        transform: translateX(-100%);
+        /* margin-left: 0; */
+    }
+    100%{
+        /* margin-left: 150px; */
+        transform: translateX(0%);
+    }
+}
